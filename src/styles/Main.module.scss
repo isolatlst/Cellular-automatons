@@ -1,0 +1,68 @@
+@import "variables";
+
+.main {
+    &__body {
+        display: grid;
+        border: 1px solid rgba(255, 255, 255, .5);
+        user-select: none;
+    }
+
+    .item { cursor: pointer; }
+    .visibleBorder { border: 1px solid rgba(255, 255, 255, .25);}
+
+    .alive { background: #000; }
+
+    .dead { }
+}
+
+
+.main__input {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: Arial;
+
+    button {
+        margin: 5px 0;
+        padding: 5px;
+        box-shadow: 0 0 5px #fff, inset 0 0 5px #fff;
+        border-radius: 5px;
+        color: $color-light;
+        background: $color-dark;
+        background: rgba(0, 0, 0, 0);
+    }
+
+    input {
+        width: 200px;
+        font-size: 16px;
+        color: $color-light;
+        background: $color-dark;
+        background: rgba(0, 0, 0, 0);
+
+        &::placeholder {
+            font-size: 16px;
+            color: $color-light;
+        }
+    }
+
+    select {
+        font-size: 16px;
+        border-radius: 5px;
+        color: $color-light;
+        background: $color-dark;
+        background: rgba(0, 0, 0, 0);
+
+    option{
+        background: $color-dark;
+        &:hover{
+            background: $color-purple;
+        }
+    }
+        &::-ms-expand {
+            display: none;
+        }
+    }
+}
