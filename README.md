@@ -10,3 +10,9 @@
 Живыми соседями являются расположенные вокруг закрашенные клетки на единичном расстоянии 
 
 Ссылка на проект: http://isolatlst.github.io/Cellular-automatons
+
+Интересные комбинации:
+![image](https://user-images.githubusercontent.com/111023582/210445768-1639ffe1-3a69-490a-8ba5-46742058ff68.png)
+(для b3s23 - игра в жизнь / рекомендумый размер сетки - не менее 10х10)
+![image](https://user-images.githubusercontent.com/111023582/210446120-c3ee3826-26e9-4db9-a984-8b120c45c33d.png)
+(для b1sAny и b3sAny / рекомендумый размер сетки - не менее 50х50)
