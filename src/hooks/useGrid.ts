@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {GamesType} from "../tools/gamesType";
 
 
@@ -13,6 +13,7 @@ export const useGrid = () => {
     const [sizeXY, setSizeXY] = React.useState(25)
     const [grid, setGrid] = React.useState(createDefaultGrid(sizeXY))
     const [isGamePaused, setIsGamePaused] = React.useState(true)
+    const [zoom, setZoom] = useState(1)
 
     const setGridSize = (e: React.ChangeEvent<{ value: string | undefined }>) => {
         if (!isGamePaused) setIsGamePaused(true)
@@ -56,6 +57,7 @@ export const useGrid = () => {
     return {
         sizeXY, setGridSize,
         grid, setGridItem, clearGrid,
-        startGame, isGamePaused, setIsGamePaused
+        startGame, isGamePaused, setIsGamePaused,
+        zoom, setZoom
     }
 }

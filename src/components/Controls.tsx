@@ -38,13 +38,19 @@ const Controls: React.FC<PropType> = ({startGame, ...props}) => {
 
     useInterval(startSelectedGame, delay, props.isGamePaused, props.grid)
 
-    const changeDelayHndlr = React.useCallback((e: React.ChangeEvent<{ value: string | undefined }>) => {
+    const changeDelayHndlr = (e: React.ChangeEvent<{ value: string | undefined }>) => {
         if (Number(e.currentTarget.value) <= 100 || isNaN(Number(e.currentTarget.value))) {
             setDelay(100)
         } else {
             setDelay(Number(e.currentTarget.value))
         }
-    },[])
+    }
+
+    const changeZoom = () => {
+        if(props.zoom === 0.25){ props.setZoom(1)}
+        else{ props.setZoom(prev => prev-0.25) }
+    }
+
 
     return (
         <div className={cl.main__input}>
@@ -62,6 +68,7 @@ const Controls: React.FC<PropType> = ({startGame, ...props}) => {
             <button onClick={() => props.setIsGridVisible(!props.isGridVisible)}>
                 {props.isGridVisible ? 'Отключить сетку' : 'Включить сетку'}
             </button>
+            <button onClick={changeZoom}>Изменить зум</button>
             <select name="callback" ref={selectedGameRef}>
                 <option value="b3s23">b3s23</option>
                 <option value="b1sAny">b1sAny</option>

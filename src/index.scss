@@ -1,7 +1,3 @@
 @import "./styles/variables";
+@import "./styles/reset.css";
 
-body {
-    display: flex;
-    background: $color-dark;
-    @include scroll();
-}
